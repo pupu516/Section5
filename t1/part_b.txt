@@ -1,0 +1,38 @@
+### Partition Function Calculation
+
+The partition function is defined as:
+
+Z(β) = ∫_0^∞ g(E) e^(-βE) dE
+
+### Step 1: Substituting the Density of States
+Using g(E) from part (a):
+
+g(E) = (8 * pi^2 / omega^2) * E
+
+Substituting this into the integral:
+
+Z(β) = ∫_0^∞ (8 * pi^2 / omega^2) * E * e^(-βE) dE
+
+Factoring out constants:
+
+Z(β) = (8 * pi^2 / omega^2) * ∫_0^∞ E * e^(-βE) dE
+
+### Step 2: Evaluating the Integral
+Using the standard result:
+
+∫_0^∞ x * e^(-ax) dx = 1 / a^2, for a > 0
+
+With x = E and a = β:
+
+∫_0^∞ E * e^(-βE) dE = 1 / β^2
+
+### Step 3: Final Expression for Z(β)
+
+Z(β) = (8 * pi^2 / omega^2) * (1 / β^2)
+
+Z(β) = 8 * pi^2 / (omega^2 * β^2)
+
+### Final Answer:
+
+Z(β) = 8 * pi^2 / (omega^2 * β^2)
+

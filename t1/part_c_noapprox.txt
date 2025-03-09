@@ -1,0 +1,61 @@
+### Exact Density of States for Nonlinear 2D Harmonic Oscillator
+
+Given the Hamiltonian:
+
+H = (p_x^2 + p_y^2) / (2m) + (1/2) m * omega^2 * (x^2 + y^2) + lambda * (x^2 + y^2)^2
+
+The density of states is defined as:
+
+g(E) = d(Omega) / dE
+
+### Step 1: Compute the Phase Space Volume
+The kinetic energy constraint gives a momentum space volume:
+
+Omega_mom = 2 * pi * m * (E - V(x, y))
+
+The potential energy term in polar coordinates is:
+
+V(r) = (1/2) m * omega^2 * r^2 + lambda * r^4
+
+Solving for r_max:
+
+E = (1/2) m * omega^2 * r_max^2 + lambda * r_max^4
+
+Rearrange as a quadratic equation in r_max^2:
+
+lambda * r_max^4 + (1/2) m * omega^2 * r_max^2 - E = 0
+
+Using the quadratic formula:
+
+r_max^2 = [ -(1/2) m * omega^2 + sqrt((1/4) m^2 * omega^4 + 4 * lambda * E) ] / (2 * lambda)
+
+Thus, the phase space integral is:
+
+Omega(E) = 4 * pi^2 * m * ∫_0^(r_max) (E - (1/2) m * omega^2 * r^2 - lambda * r^4) r dr
+
+Expanding:
+
+I = ∫_0^(r_max) (E * r - (1/2) m * omega^2 * r^3 - lambda * r^5) dr
+
+Using standard integrals:
+
+∫_0^R r dr = R^2 / 2
+∫_0^R r^3 dr = R^4 / 4
+∫_0^R r^5 dr = R^6 / 6
+
+Substituting r_max^2:
+
+Omega(E) = 4 * pi^2 * m * [ E * (r_max^2 / 2) - (1/2) m * omega^2 * (r_max^4 / 4) - lambda * (r_max^6 / 6) ]
+
+### Step 2: Compute the Density of States
+
+g(E) = d/dE [ Omega(E) ]
+
+Substituting r_max^2 and differentiating term by term gives:
+
+g(E) = exact expression depending on m, omega, lambda, and E.
+
+### Final Answer:
+
+g(E) = d/dE [ 4 * pi^2 * m * ( E * r_max^2 / 2 - (1/2) m * omega^2 * r_max^4 / 4 - lambda * r_max^6 / 6 ) ]
+

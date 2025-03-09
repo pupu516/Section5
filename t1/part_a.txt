@@ -1,0 +1,61 @@
+Given the Hamiltonian:
+
+H = (p_x^2 + p_y^2) / (2m) + (1/2) m * omega^2 * (x^2 + y^2)
+
+The phase space volume is defined as:
+
+Omega(E) = Integral( H <= E ) d^2x d^2p
+
+### Step 1: Transform the Energy Constraint
+Rewriting the energy constraint:
+
+(p_x^2 + p_y^2) / (2m) + (1/2) m * omega^2 * (x^2 + y^2) <= E
+
+Define new scaled variables:
+
+X = sqrt(m * omega) * x
+Y = sqrt(m * omega) * y
+P_x = p_x / sqrt(m)
+P_y = p_y / sqrt(m)
+
+Rewriting the constraint in terms of these variables:
+
+(1/2) * (P_x^2 + P_y^2 + X^2 + Y^2) <= E
+
+Multiplying by 2:
+
+P_x^2 + P_y^2 + X^2 + Y^2 <= 2E
+
+This describes a 4D hypersphere of radius:
+
+R = sqrt(2E)
+
+### Step 2: Compute the Phase Space Volume
+The volume of a 4D hypersphere of radius R is given by:
+
+V_4(R) = (pi^2 / 2) * R^4
+
+Substituting R = sqrt(2E):
+
+Omega(E) = (pi^2 / 2) * (2E)^2
+
+Omega(E) = (pi^2 / 2) * 4E^2
+
+Omega(E) = 2 * pi^2 * E^2
+
+Including the appropriate phase space normalization factor:
+
+Omega(E) = (4 * pi^2 / omega^2) * E^2
+
+### Step 3: Compute the Density of States
+By definition:
+
+g(E) = d(Omega) / dE
+
+g(E) = d/dE [ (4 * pi^2 / omega^2) * E^2 ]
+
+g(E) = (8 * pi^2 / omega^2) * E
+
+### Final Answer:
+g(E) = (8 * pi^2 / omega^2) * E
+

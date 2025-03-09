@@ -1,0 +1,44 @@
+### Approximate Density of States for Nonlinear 2D Harmonic Oscillator
+
+Given the Hamiltonian:
+
+H = (p_x^2 + p_y^2) / (2m) + (1/2) m * omega^2 * (x^2 + y^2) + lambda * (x^2 + y^2)^2
+
+The density of states is defined as:
+
+g(E) = d(Omega) / dE
+
+### Step 1: Compute the Phase Space Volume
+The kinetic energy constraint gives a momentum space volume:
+
+Omega_mom = 2 * pi * m * (E - V(x, y))
+
+The potential energy term in polar coordinates is:
+
+V(r) = (1/2) m * omega^2 * r^2 + lambda * r^4
+
+Approximating at large E where lambda dominates:
+
+V(r) ≈ lambda * r^4
+
+Solving for the maximum radius:
+
+r_max ≈ (E / lambda)^(1/4)
+
+Phase space volume integral:
+
+Omega(E) ~ ∫_0^(E/lambda)^(1/4) (E - lambda * r^4) r dr
+
+Since r ~ E^(1/4), we get:
+
+Omega(E) ∝ E^(5/4)
+
+### Step 2: Compute Density of States
+
+g(E) = d/dE [ E^(5/4) ]
+
+g(E) ∝ E^(1/4)
+
+### Final Answer:
+
+g(E) ∝ E^(1/4)

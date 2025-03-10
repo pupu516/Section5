@@ -1,0 +1,18 @@
+Grand Partition Function Derivation:
+
+We have a system of fermions with energy levels:
+
+epsilon, 2epsilon, 3epsilon, ..., M * epsilon
+
+Since fermions follow the Pauli exclusion principle, each energy level can have at most one particle.
+
+The grand partition function is:
+
+Z(beta, mu) = (1 + e^(-beta * (1 * epsilon - mu))) * (1 + e^(-beta * (2 * epsilon - mu))) * ... * (1 + e^(-beta * (M * epsilon - mu)))
+
+Here:
+- beta = 1 / (kB * T), which is inverse temperature
+- mu is the chemical potential
+- epsilon is the energy unit
+- The product runs over all M energy levels, and each term accounts for the two possible states: empty or occupied.
+

@@ -1,0 +1,22 @@
+i### Part (g): Particle Number in the Grand Canonical Ensemble
+
+We have N indistinguishable bosons in a 2-level system with:
+- Ground state energy = 0
+- Excited state energy = epsilon
+
+### Average Particle Number in the Grand Canonical Ensemble
+The average number of particles in the system under the grand ensemble is given by:
+
+⟨n⟩ = kB * T * (∂ / ∂μ) ln(ΩG)
+
+where ΩG is the grand partition function:
+
+ΩG = (1 / (1 - e^(-beta * (0 - mu)))) * (1 / (1 - e^(-beta * (epsilon - mu))))
+
+Taking the derivative with respect to μ, we obtain:
+
+⟨n⟩ = (1 / (e^(beta * mu) - 1)) + (1 / (e^(beta * (epsilon - mu)) - 1))
+
+### Interpretation
+- This equation determines how the particle number varies with temperature and chemical potential.
+- It is useful for studying phase transitions, such as Bose-Einstein condensation.

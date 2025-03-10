@@ -1,0 +1,23 @@
+### Part (h): Near-Degenerate Bose Systems
+
+We have a system of indistinguishable bosons with:
+- Near-degenerate energy levels close to each other.
+
+### Simulating a Near-Degenerate Bose System
+A near-degenerate system introduces small energy separations between levels, modifying the occupation of states.
+
+For such a system, we can numerically compute:
+- Negative chemical potential (μ)
+- Ground state occupation ⟨n₀⟩
+- Logarithm of ground state occupation log(⟨n₀⟩)
+- Negative gradient of ground state occupation w.r.t. temperature ∂⟨n₀⟩/∂T
+- Specific heat Cv
+
+These quantities are computed by summing over all states:
+
+⟨n⟩ = Σ 1 / (e^(beta * (epsilon_i - mu)) - 1)
+
+### Interpretation
+- The near-degenerate system mimics conditions where Bose-Einstein condensation occurs gradually.
+- The occupation of the ground state changes smoothly as temperature decreases, leading to condensation effects.
+

@@ -1,0 +1,38 @@
+### Hamiltonian Derivation for the Double Pendulum
+
+#### Given system parameters:
+- m_1, m_2: Masses of the two pendulums
+- L_1, L_2: Lengths of the rods
+- g: Acceleration due to gravity
+- θ_1, θ_2: Angles of the pendulums
+- p_1, p_2: Generalized momenta conjugate to θ_1, θ_2
+
+#### Generalized Momenta:
+
+p_1 = (m_1 * L_1^2 + m_2 * L_1^2) * \dot{θ}_1 + m_2 * L_1 * L_2 * \dot{θ}_2 * cos(θ_1 - θ_2)
+
+p_2 = m_2 * L_2^2 * \dot{θ}_2 + m_2 * L_1 * L_2 * \dot{θ}_1 * cos(θ_1 - θ_2)
+
+Rewriting in matrix form:
+
+M = [
+    [m_1 * L_1^2 + m_2 * L_1^2, m_2 * L_1 * L_2 * cos(θ_1 - θ_2)],
+    [m_2 * L_1 * L_2 * cos(θ_1 - θ_2), m_2 * L_2^2]
+]
+
+Solving for \dot{θ}_1 and \dot{θ}_2:
+
+[\dot{θ}_1, \dot{θ}_2] = M^(-1) * [p_1, p_2]
+
+#### Hamiltonian Definition:
+
+H = p_1 * \dot{θ}_1 + p_2 * \dot{θ}_2 - L
+
+Substituting \dot{θ}_1 and \dot{θ}_2:
+
+H = (1/2) * [p_1, p_2] * M^(-1) * [p_1, p_2]^T + g * (m_1 * L_1 * cos(θ_1) + m_2 * (L_1 * cos(θ_1) + L_2 * cos(θ_2)))
+
+### Final Hamiltonian:
+
+H = (1/2) * [p_1, p_2] * M^(-1) * [p_1, p_2]^T + g * (m_1 * L_1 * cos(θ_1) + m_2 * (L_1 * cos(θ_1) + L_2 * cos(θ_2)))
+

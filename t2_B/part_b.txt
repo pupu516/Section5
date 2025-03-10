@@ -1,0 +1,49 @@
+Bose-Einstein Condensate (BEC) - Microstates and Partition Function
+
+We have N indistinguishable bosons in a 2-level system with:
+- Ground state energy = 0
+- Excited state energy = epsilon
+
+### Microstates
+Since bosons do not follow the Pauli exclusion principle, multiple bosons can occupy the same energy level.
+
+Each microstate is defined by how the N bosons are distributed between these two energy levels.
+
+Define:
+n0 = Number of bosons in the ground state (energy = 0)
+ne = Number of bosons in the excited state (energy = epsilon)
+
+Since the total number of bosons is fixed:
+n0 + ne = N
+
+Possible microstates:
+1. All bosons in the ground state: (N, 0)
+2. One boson in the excited state: (N-1, 1)
+3. Two bosons in the excited state: (N-2, 2)
+4. Continuing this pattern...
+5. All bosons in the excited state: (0, N)
+
+There are (N + 1) different microstates, since ne can range from 0 to N.
+
+### Canonical Partition Function
+The partition function in the canonical ensemble is given by:
+
+Z_C = sum over all microstates of e^(-beta * E)
+
+Since the total energy of a microstate is given by:
+E = ne * epsilon
+
+The partition function sums over all possible values of ne:
+
+Z_C = sum from ne=0 to N of [ C(N, ne) * e^(-beta * ne * epsilon) ]
+
+where C(N, ne) = N! / (ne! * (N - ne)!) is the binomial coefficient, which counts the number of ways to place ne bosons in the excited state.
+
+Using the binomial theorem, this simplifies to:
+
+Z_C = (1 + e^(-beta * epsilon))^N
+
+### Importance
+- This function determines thermodynamic properties such as average energy and particle distribution.
+- The factor e^(-beta * epsilon) controls the probability of bosons occupying the excited state.
+

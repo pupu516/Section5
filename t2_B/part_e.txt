@@ -1,0 +1,19 @@
+i### Part (e): Average Particle Number in the Quantum Case
+
+We have N indistinguishable bosons in a 2-level system with:
+- Ground state energy = 0
+- Excited state energy = epsilon
+
+### Average Particle Number in Quantum Ensemble
+The average number of bosons in the excited state under Bose-Einstein statistics is given by:
+
+n_e = 1 / (e^(beta * epsilon) - 1)
+
+Since the total number of bosons is N, the number in the ground state is:
+
+n_0 = N - n_e
+
+### Interpretation
+- At very low temperatures (large beta), most bosons stay in the ground state, leading to Bose-Einstein condensation.
+- As temperature increases, more bosons move to the excited state following the Bose-Einstein distribution.
+

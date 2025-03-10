@@ -1,0 +1,17 @@
+### Part (i): Bose System Without BEC
+
+### Designing a Bose System That Does Not Experience BEC
+A system that does not exhibit Bose-Einstein condensation must avoid the singular behaviors seen in thermodynamic properties.
+
+### Conditions for No BEC
+To prevent BEC, we require:
+1. High level degeneracy: Many accessible excited states.
+2. Large energy gaps: The energy difference between states prevents macroscopic occupation of a single state.
+3. Strong interactions: Repulsive interactions between bosons suppress condensation.
+
+### Observations
+- The occupation of the ground state remains low even at very low temperatures.
+- Thermodynamic properties such as specific heat do not show singularities.
+
+By ensuring these conditions, we construct a system where BEC does not occur, meaning the bosons remain evenly distributed among available energy states.
+
